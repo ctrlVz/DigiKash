@@ -71,13 +71,6 @@ DigiKash/
 │   ├── css/ & js/        # Tailwind & Alpine entry points
 │   └── views/            # Blade templates categorized by backend/frontend
 └── routes/               # Modular routing (web, api, admin, auth, channels)
-
-Ah, paham! Kamu ingin struktur `README.md` yang bukan sekadar panduan *install*, tapi juga **membedah jeroan aplikasi (arsitektur source code)** dengan tampilan yang visualnya *clean*, *aesthetic*, elegan, dan bernuansa premium—sangat cocok untuk audiens yang menggunakan tema *dark mode* di GitHub mereka.
-
-Berikut adalah draf `README.md` komprehensif yang dirancang khusus untuk memamerkan kualitas teknis dari DigiKash. Kamu bisa langsung menyalin seluruh teks di dalam kotak ini.
-
----
-
 ```
 
 ---
