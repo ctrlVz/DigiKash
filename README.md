@@ -82,7 +82,7 @@ DigiKash/
 **1. Clone & Install Dependencies**
 
 ```bash
-git clone [https://github.com/USERNAME/DigiKash.git](https://github.com/USERNAME/DigiKash.git)
+git clone https://github.com/ctrlVz/DigiKash.git)
 cd DigiKash
 composer install
 npm install
