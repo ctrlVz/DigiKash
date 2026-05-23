@@ -71,3 +71,71 @@ DigiKash/
 │   ├── css/ & js/        # Tailwind & Alpine entry points
 │   └── views/            # Blade templates categorized by backend/frontend
 └── routes/               # Modular routing (web, api, admin, auth, channels)
+
+Ah, paham! Kamu ingin struktur `README.md` yang bukan sekadar panduan *install*, tapi juga **membedah jeroan aplikasi (arsitektur source code)** dengan tampilan yang visualnya *clean*, *aesthetic*, elegan, dan bernuansa premium—sangat cocok untuk audiens yang menggunakan tema *dark mode* di GitHub mereka.
+
+Berikut adalah draf `README.md` komprehensif yang dirancang khusus untuk memamerkan kualitas teknis dari DigiKash. Kamu bisa langsung menyalin seluruh teks di dalam kotak ini.
+
+---
+
+```
+
+---
+
+## 🛠 Installation & Setup
+
+> **Note:** This repository utilizes **Git LFS (Large File Storage)** for database schema files. Ensure you have Git LFS installed before cloning.
+
+**1. Clone & Install Dependencies**
+
+```bash
+git clone [https://github.com/USERNAME/DigiKash.git](https://github.com/USERNAME/DigiKash.git)
+cd DigiKash
+composer install
+npm install
+
+```
+
+**2. Environment Configuration**
+
+```bash
+cp .env.example .env
+php artisan key:generate
+
+```
+
+*Configure your database, SMTP, and Reverb credentials in the `.env` file.*
+
+**3. Database & Migrations**
+
+```bash
+php artisan migrate --seed
+
+```
+
+**4. Build Assets & Run**
+Open two terminal windows to run both the web server and the WebSocket server:
+
+```bash
+# Terminal 1: Compile UI and start Laravel
+npm run dev
+php artisan serve
+
+# Terminal 2: Start Real-Time WebSockets
+php artisan reverb:start
+
+```
+
+---
+
+## 🛡️ Security Implementations
+
+Security is paramount in financial applications. DigiKash implements:
+
+* **Purifier (`mews/purifier`):** Strict XSS filtering for all user inputs.
+* **IP Blocking Middleware:** Automated and manual IP blacklisting.
+* **Duplicate Submission Timeout:** Prevents double-spending during network lags.
+* **Google 2FA:** Mandatory two-factor authentication for administrative actions.
+
+---
+
